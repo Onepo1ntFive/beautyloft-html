@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 ::selection {
-    background: $color-green;
+    background: $color-brown;
     color: $color-white;
 }
 ::-moz-selection {
-    background: $color-green;
+    background: $color-brown;
     color: $color-white;
 }
 html * {
@@ -26,7 +26,7 @@ body {
     font-family: $font-family;
     line-height: 1.5;
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: $color-font;
     -webkit-backface-visibility: hidden;
     -webkit-text-size-adjust: 100%;
@@ -37,62 +37,95 @@ sup {
 }
 h1,
 .h1 {
-    margin-bottom: 0.75em;
-    font-family: $font-family-slab;
+    margin-bottom: 1em;
+    font-family: $font-family-oswald;
     line-height: 1.2;
-    font-weight: bold;
-    font-size: 2.6rem;
+    font-weight: 500;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
     color: $color-font;
 
-    @media (min-width: $breakpoint-tablet) {
-        font-size: 3.4rem;
+    @media (min-width: $breakpoint-desktop) {
+        font-size: 8rem;
     }
 }
 h2,
 .h2 {
-    margin-bottom: 0.75em;
-    font-family: $font-family-slab;
+    margin-bottom: 1em;
+    font-family: $font-family-oswald;
     line-height: 1.2;
-    font-weight: bold;
-    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
     color: $color-font;
 
-    @media (min-width: $breakpoint-tablet) {
-        font-size: 2.8rem;
+    @media (min-width: $breakpoint-desktop) {
+        font-size: 6rem;
     }
 }
 h3,
 .h3 {
-    margin-bottom: 0.75em;
-    font-family: $font-family-slab;
+    margin-bottom: 1em;
+    font-family: $font-family-oswald;
     line-height: 1.2;
-    font-weight: bold;
-    font-size: 1.8rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
     color: $color-font;
 
-    @media (min-width: $breakpoint-tablet) {
-        font-size: 1.8rem;
+    @media (min-width: $breakpoint-desktop) {
+        font-size: 2.4rem;
     }
 }
 h4,
 .h4 {
     margin-bottom: 0.75em;
-    font-family: $font-family-slab;
+    font-family: $font-family-oswald;
     line-height: 1.2;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    text-transform: uppercase;
     color: $color-font;
 }
 a {
-    color: $color-green;
+    color: $color-brown;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
 a:hover {
-    color: $color-font;
+    text-decoration: none;
+    color: $color-brown;
 }
 .ov-h {
     overflow: hidden !important;
+}
+/*----------*/
+.b-title-line {
+    margin-bottom: 0.8em;
+    padding-bottom: 0.8em;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 0.2rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        background-color: $color-brown;
+    }
+}
+h1.b-title-line::before,
+h2.b-title-line::before {
+    margin-left: -4rem;
+    width: 8rem;
+}
+h3.b-title-line::before {
+    margin-left: -3rem;
+    width: 6rem;
 }
 /*----------*/
 .b-ruble-font {
@@ -102,20 +135,37 @@ a:hover {
 .b-button,
 a.b-button,
 button.b-button {
-    padding: 1.5rem 3rem;
-    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
     display: block;
-    background: $color-red;
-    opacity: 1;
+    border: 2px solid $color-brown;
+    background-color: $color-brown;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.5rem;
+    font-family: $font-family-oswald;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1;
     color: $color-white;
-    transition: opacity 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    background-blend-mode: multiply;
+
+    @media (min-width: $breakpoint-mobile-normal) {
+        padding: 2rem 3rem;
+        font-size: 1.7rem;
+    }
 
     &:hover {
-        opacity: 0.8;
+        background-color: rgba(42, 42, 42, 0.5);
     }
+
+    &--clear {
+        background-color: rgba(42, 42, 42, 0.5);
+
+        &:hover {
+            background-color: $color-brown;
+        }
+    }
+
 }
 /*----------*/
 @media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
@@ -133,3 +183,4 @@ button.b-button {
         display: none !important;
     }
 }
+

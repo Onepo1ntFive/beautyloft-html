@@ -1,6 +1,6 @@
 .l-wrap {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
     width: 100%;
     min-height: 100%;
     position: relative;
@@ -11,32 +11,34 @@
 }
 /*----------*/
 .l-header {
-    margin: auto;
-    max-width: 1280px;
-    width: 100%;
-
-    @media (min-width: $breakpoint-tablet) {
-    }
-    @media (min-width: $breakpoint-desktop) {
-    }
+    margin-left: -2rem;
+    margin-right: -2rem;
 }
 /*----------*/
 .l-content {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     flex: 1 auto;
 
     @media (min-width: $breakpoint-tablet) {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
     }
 
     .content__wrap {
         margin: auto;
-        max-width: 1280px;
+        max-width: 120rem;
         width: 100%;
     }
 }
 /*----------*/
-.l-footer {}
+.l-footer {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    background-color: $color-font;
+}
 /*----------*/

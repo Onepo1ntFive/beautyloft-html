@@ -1,0 +1,119 @@
+.b-rent {
+    margin-bottom: 5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 10rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 15rem;
+    }
+
+    .rent__items {
+    }
+    .rent__item {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        background-color: $color-lightgray2;
+    }
+    .rent__pic {
+        img {
+            max-width: 100%;
+        }
+    }
+    .rent__content {
+        padding: 2rem 3rem 3rem;
+        flex: 1 auto;
+
+        li {
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+
+            &::before {
+                content: "-";
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    .rent__footer {
+        padding: 3rem;
+        border-top: 3px solid $color-white;
+    }
+    .rent__price {
+        padding-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 500;
+        font-size: 3.4rem;
+        line-height: 1;
+        text-transform: uppercase;
+        font-family: $font-family-oswald;
+
+        span {
+            font-size: 1.2em;
+        }
+    }
+}
+/*----------*/
+.swiper-container-rent {
+    margin: auto;
+    overflow: visible;
+
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 40rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        overflow: hidden;
+        max-width: none;
+    }
+
+    .swiper-slide {
+        height: auto;
+        opacity: 0.3;
+        transition: opacity 0.5s ease-in-out;
+
+        @media (min-width: $breakpoint-desktop) {
+            opacity: 1;
+        }
+
+        &-active {
+            opacity: 1;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin-top: -2rem;
+        background: $color-brown 50% 50% no-repeat;
+        top: 11rem;
+        width: 4rem;
+        height: 4rem;
+        transition: background-position 0.2s ease-in-out;
+
+        &::after {
+            display: none;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            display: none;
+        }
+    }
+    .swiper-button-prev {
+        left: -2rem;
+        background-image: url("../img/arrow-left.svg");
+
+        &:hover {
+            background-position: 30% 50%;
+        }
+    }
+    .swiper-button-next {
+        right: -2rem;
+        background-image: url("../img/arrow-right.svg");
+
+        &:hover {
+            background-position: 70% 50%;
+        }
+    }
+}
+/*----------*/
