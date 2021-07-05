@@ -23,6 +23,7 @@
             background-color: $color-white;
             width: 2rem;
             height: 0.2rem;
+            transition: background-color 0.5s ease-in-out;
 
             &::before,
             &::after {
@@ -34,12 +35,26 @@
                 background-color: $color-white;
                 width: 2rem;
                 height: 0.2rem;
+                transition: transform 0.5s ease-in-out;
             }
             &::before {
                 transform: translate(-50%, calc(-50% + 8px));
             }
             &::after {
                 transform: translate(-50%, calc(-50% - 8px));
+            }
+        }
+
+        &--active {
+            span {
+                background-color: transparent;
+
+                &::before {
+                    transform: translate(-50%, -50%) rotate(135deg);
+                }
+                &::after {
+                    transform: translate(-50%, -50%) rotate(-135deg);
+                }
             }
         }
     }
@@ -50,6 +65,7 @@
         top: 100%;
         right: 0;
         background: $color-white;
+        text-align: center;
         display: none;
 
         @media (min-width: $breakpoint-desktop) {
