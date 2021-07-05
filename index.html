@@ -20,12 +20,12 @@
                             <div class="b-menu">
                                 <div class="menu__btn js-menu-sandwich"><span></span></div>
                                 <nav class="menu__items js-menu-items">
-                                    <a href="#">О нас</a>
-                                    <a href="#">Преимущества</a>
-                                    <a href="#">Отзывы</a>
-                                    <a href="#">Аренда</a>
-                                    <a href="#">Вопрос ответ</a>
-                                    <a href="#">Контакты</a>
+                                    <a href="#about">О нас</a>
+                                    <a href="#benefits">Преимущества</a>
+                                    <a href="#review">Отзывы</a>
+                                    <a href="#rent">Аренда</a>
+                                    <a href="#qa">Вопрос ответ</a>
+                                    <a href="#contacts">Контакты</a>
                                 </nav>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
         </header>
     
         <section class="l-content"> 
-            <div class="b-about">
+            <div class="b-about" id="about">
                 <div class="about__content">
                     <h2 class="b-title-line">Beauty-loft</h2>
                     <p>Beauty-loft – это пространство для мастеров индустрии красоты, для работы в котором от вас не нужно ничего, кроме вашего таланта и профессионализма. Всё необходимое для эффективной работы вам предоставим мы.</p>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b-benefits">
+            <div class="b-benefits" id="benefits">
                 <h2>Наши преимущества</h2>
                 <div class="benefits__items">
                     <div class="benefits__item">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b-review">
+            <div class="b-review" id="review">
                 <div class="review__inner">
                     <h2 class="b-title-line">Что говорят о нас?</h2>
                     <div class="review__slider">
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div class="content__wrap">
-                <div class="b-rent">
+                <div class="b-rent" id="rent">
                     <h2>Аренда рабочих мест</h2>
                     <div class="swiper-container swiper-container-rent js-swiper-rent">
                         <div class="rent__items swiper-wrapper">
@@ -270,7 +270,7 @@
                         <div class="swiper-button-next"></div>
                     </div>
                 </div>
-                <div class="b-acc">
+                <div class="b-acc" id="qa">
                     <h2>Часто задаваемые вопросы?</h2>
                     <div class="acc__item acc__item--active">
                         <div class="acc__title js-acc-title">Рыбатекст используется дизайнерами? <span></span></div>
@@ -286,7 +286,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b-contacts">
+            <div class="b-contacts" id="contacts">
                 <div class="contacts__inner">
                     <div class="contacts__content">
                         <h2 class="b-title-line">Контакты</h2>
@@ -296,6 +296,18 @@
                     <div class="contacts__map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21375.742267481364!2d37.63103175303222!3d55.72639140006477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b21c246f20f%3A0xc4ce3b52ee01e72e!2z0YPQuy4g0JvQtdGC0L3QuNC60L7QstGB0LrQsNGPLCA0INGBNSwg0JzQvtGB0LrQstCwLCAxMTUxMTQ!5e0!3m2!1sru!2sru!4v1625390514027!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
+                </div>
+            </div>
+            <div class="b-form">
+                <div class="form__inner">
+                    <h2 class="b-title-line">Остались вопросы?</h2>
+                    <p>Мы Вам перезвоним!</p>
+                    <form>
+                        <input type="text" placeholder="Ваше Имя">
+                        <input type="text" placeholder="Ваш номер телефона">
+                        <button class="b-button" type="submit">оставить заявку</button>
+                    </form>
+                    <p class="form__agree">Отправляя данные, Вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
                 </div>
             </div>
         </section>
