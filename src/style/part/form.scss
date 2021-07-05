@@ -1,0 +1,93 @@
+.b-form {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: $color-lightgray2;
+    text-align: center;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+    }
+
+    h2 {
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    form {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+    }
+    input {
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border: 0;
+        background: $color-white;
+        font-size: 1.7rem;
+        line-height: 1;
+        color: $color-font;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 0;
+            width: calc(33.33% - 1.5rem);
+        }
+    }
+    button {
+        line-height: 1;
+        text-align: center;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            width: calc(33.33% - 1.5rem);
+        }
+    }
+    .form__inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin: auto;
+        max-width: 48rem;
+
+        @media (min-width: $breakpoint-desktop) {
+            max-width: 112rem;
+        }
+    }
+    .form__agree {
+        font-size: 1.4rem;
+        color: $color-lightgray4;
+    }
+
+    &--popup {
+        padding: 0;
+        margin: 0;
+        background: none;
+
+        form {
+            padding-bottom: 0;
+        }
+        input {
+            border: 1px solid $color-lightgray4;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        button {
+            width: 100%;
+        }
+        .form__inner {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .form__agree {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+    }
+}

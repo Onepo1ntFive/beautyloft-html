@@ -119,10 +119,13 @@ a:hover {
     }
 }
 h1.b-title-line::before,
-h2.b-title-line::before {
+h2.b-title-line::before,
+.h1.b-title-line::before,
+.h2.b-title-line::before {
     margin-left: -4rem;
     width: 8rem;
 }
+.h3.b-title-line::before,
 h3.b-title-line::before {
     margin-left: -3rem;
     width: 6rem;
